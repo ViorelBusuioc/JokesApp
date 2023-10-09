@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="CENTER" hgap="10" vgap="30.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.lpa.jokesapp.MainController">
+
+    <Label fx:id="jokeField" alignment="CENTER" text="Welcome to the Joke App. Press the generate button and enjoy unlimited jokes. App by VIOREL BUSUIOC" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+    <Button fx:id="button" onAction="#onButtonClick" text="Generate Joke" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+
+    <HBox spacing="10" style="-fx-alignment: center;" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+        <RadioButton fx:id="random" selected="true" text="Random" GridPane.halignment="CENTER">
+         <toggleGroup>
+            <ToggleGroup fx:id="jokeToggleGroup" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="general" text="General" toggleGroup="$jokeToggleGroup" GridPane.halignment="CENTER" />
+        <RadioButton fx:id="programming" text="Programming" toggleGroup="$jokeToggleGroup" GridPane.halignment="CENTER" />
+        <RadioButton fx:id="dad" text="Dad" toggleGroup="$jokeToggleGroup" GridPane.halignment="CENTER" />
+        <RadioButton fx:id="knock" text="Knock-knock" toggleGroup="$jokeToggleGroup" GridPane.halignment="CENTER" />
+    </HBox>
+
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+</GridPane>
